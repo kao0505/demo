@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>該翻面了</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            color: #555;
+            font-size: 1.5em;
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>該翻面了</h1>
+    <p>還剩下:0.05分鐘</p>
+
+    <script>
+        setTimeout(switchPage, 3000);
+        function switchPage() {
+      window.location.href = '/done.html';
+    }
+    </script>
+</body>
+</html>

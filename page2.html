@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>烤肉機控制面板</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 20px;
+  }
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .button-refresh {
+    background-color: #f3f4f6; /* light gray for light theme */
+    border: 2px solid #d1d5db; /* border color */
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .button-refresh:hover {
+    background-color: #e5e7eb;
+  }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<div class="grid-container">
+  <div class="grid-item col-span-4 font-bold text-lg">目前資訊</div>
+  <div class="grid-item col-span-2" id="meat-info">肉品: None</div>
+  <div class="grid-item col-span-2" id="thickness-info">厚度: N公分</div>
+  <div class="grid-item col-span-2" id="flip-time-info">翻面時間: None</div>
+  <div class="grid-item col-span-2" id="total-duration-info">總時長: None</div>
+  <div class="grid-item col-span-4">
+    <div class="button-refresh" id="refresh_button" onclick="switchPage()">刷新<br>(放下肉後點擊刷新)</div>
+  </div>
+</div>
+
+<script>
+  function switchPage() {
+      window.location.href = '/page2-refresh.html';
+    }
+
+</script>
+</body>
+</html>

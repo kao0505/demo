@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>烤肉機控制面板</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 20px;
+  }
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .button-refresh {
+    background-color: #f3f4f6; /* light gray for light theme */
+    border: 2px solid #d1d5db; /* border color */
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .button-refresh:hover {
+    background-color: #e5e7eb;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: xxx-large;
+  }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<div class="grid-container">
+  <div class="grid-item col-span-4 font-bold text-lg">目前資訊</div>
+  <div class="grid-item col-span-2">肉品: 牛肉</div>
+  <div class="grid-item col-span-2">厚度: N公分</div>
+  <div class="grid-item col-span-2">翻面時間: 0.05 分鐘</div>
+  <div class="grid-item col-span-2">總時長: 0.1 分鐘</div>
+</div>
+
+<script>
+      setTimeout(switchPage, 3000);
+      function switchPage() {
+      window.location.href = '/flip.html';
+    }
+</script>
+
+<div class="footer">
+  顯示範例
+</div>
+</body>
+</html>
